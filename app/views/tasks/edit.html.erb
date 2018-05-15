@@ -1,0 +1,28 @@
+<h1>Edit form</h1>
+
+
+<!-- <form>
+  <div>
+    <input type="checkbox" id="done" name="done" value="mark as completed">
+    <label for="done">mark as completed?</label>
+  </div>
+  <div>
+    <button type="submit">Completed</button>
+  </div>
+</form> -->
+
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+
+  <%= f.submit %>
+
+<% end %>
+
